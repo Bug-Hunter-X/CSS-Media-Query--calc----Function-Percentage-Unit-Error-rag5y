@@ -1,0 +1,7 @@
+The following CSS code snippet demonstrates an uncommon error related to the usage of the `calc()` function within media queries.  The issue arises when attempting to calculate a value based on percentages that are dependent on the viewport width or height. If you don't explicitly specify units on the percentage values, it can lead to unexpected behavior or parsing errors.  
+```css
+@media (max-width: calc(100% - 50px)) {
+  /* Styles here */
+}
+```
+In this case, `calc(100% - 50px)` is perfectly valid, but in different scenarios, issues arise. For example, attempting to use `calc(50% - 50px)` where the percentages aren't anchored to a viewport dimension can cause problems.
