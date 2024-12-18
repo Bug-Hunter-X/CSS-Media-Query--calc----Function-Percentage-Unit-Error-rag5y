@@ -1,0 +1,8 @@
+The solution involves explicitly specifying units for the percentage values within the `calc()` function, ensuring that the browser correctly interprets the calculation.
+
+```css
+@media (max-width: calc(100vw - 50px)) {
+  /* Styles here */
+}
+```
+By adding `vw` (viewport width), we explicitly define that the percentage is relative to the viewport width. This removes ambiguity and ensures that the media query works reliably.  Similarly, use `vh` for viewport height.  This explicitness avoids potential browser inconsistencies.
